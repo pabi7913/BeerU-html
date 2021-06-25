@@ -1,0 +1,1277 @@
+body {
+    background-color: var(--blue);
+}
+
+
+.quiz-wrapper {
+    height: 90vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ----------------下一步按鈕開始---------------------- */
+
+.next-btn {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    width: fit-content;
+    transition: .5s;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.next-btn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../../images/common/ear_left_yellow.svg) 0 0 no-repeat;
+    width: 18px;
+    height: 18px;
+    left: -25%;
+    bottom: 23%;
+    opacity: 1;
+    transition: .3s;
+}
+
+.next-btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../../images/common/ear_right_yellow.svg) 0 0 no-repeat;
+    width: 18px;
+    height: 18px;
+    right: -33%;
+    bottom: 23%;
+    opacity: 1;
+    transition: .3s;
+}
+
+.next-btn:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.next-btn:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../../images/common/ear_right_yellow.svg) 0 0 no-repeat;
+    width: 18px;
+    height: 18px;
+    right: -33%;
+    bottom: 23%;
+    opacity: 0;
+}
+
+.next-btn:hover::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../../images/common/ear_left_yellow.svg) 0 0 no-repeat;
+    width: 18px;
+    height: 18px;
+    left: -25%;
+    bottom: 23%;
+    opacity: 0;
+}
+
+/* 下一步按鈕結束 */
+
+/* ------------------- 心理測驗第一題 ------------------- */
+
+.quiz-1-wrap {
+    display: flex;
+    margin: 0 auto;
+    /* min-height: 90vh; */
+    align-items: center;
+    /* padding-bottom: 10vh; */
+}
+
+.quiz-1-wrap .quiz-q {
+    color: #fff;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 3.6rem;
+    letter-spacing: 1.2rem;
+    text-indent: 1.2rem;
+    text-align: center;
+}
+
+.quiz-quote {
+    color: #fff;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 2.6rem;
+    letter-spacing: 0.8rem;
+    text-indent: 1.2rem;
+    text-align: center;
+}
+
+.quiz-1-wrap .quiz-row {
+    min-height: 50vh;
+    align-content: center;
+}
+
+.quiz-1-wrap .option-wrap {
+    position: relative;
+    text-align: center;
+    color: var(--gold);
+    cursor: pointer;
+}
+
+.quiz-1-wrap .option-img {
+    max-width: 300px;
+    max-height: 300px;
+    opacity: 0.5;
+}
+
+.quiz-1-wrap .option-img.show {
+    opacity: 1;
+}
+
+.quiz-1-wrap .option-1-title-ch {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 2.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    display: none;
+    color: #fff;
+}
+
+.quiz-1-wrap .option-1-title-ch.show {
+    display: block;
+    color: var(--gold);
+}
+
+.quiz-1-wrap .option-1-title-ch.active {
+    display: block;
+    color: #ffd76c;
+}
+
+.quiz-1-wrap .option-1-txt {
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    margin: 2% 2%;
+    padding: 2% 5%;
+    font-size: 1.4rem;
+    text-align: justify;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    line-height: 2.2rem;
+    display: none;
+}
+
+.quiz-1-wrap .option-1-txt.show {
+    display: block;
+}
+
+/* 心理測驗第一題-波特的內容 */
+
+.quiz-1-wrap .o2-txt {
+    transform: translate(-50%, -70%);
+}
+
+/* ------------------- 心理測驗第二題 ------------------- */
+
+.quiz-2-wrap {
+    display: flex;
+    margin: 0 auto;
+    /* min-height: 90vh; */
+    align-items: center;
+}
+
+.quiz-2-wrap .quiz-q {
+    color: #fff;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 3.6rem;
+    letter-spacing: 1.2rem;
+    text-indent: 1.2rem;
+    text-align: center;
+    /* padding-top: 100px; */
+}
+
+.quiz-2-wrap .quiz-row {
+    min-height: 50vh;
+    align-content: center;
+}
+
+.quiz-2-wrap .option-wrap {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    text-align: center;
+    color: var(--gold);
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.quiz-2-wrap .option-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.quiz-2-wrap .option-img.active {
+    border: 3px solid #ffd76c;
+}
+
+.quiz-2-wrap .option-2-title-wrap {
+    display: none;
+}
+
+.quiz-2-wrap .option-2-title-wrap.show {
+    display: block;
+}
+
+.quiz-2-wrap .option-2-title-wrap p {
+    width: 300px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 2.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--blue);
+}
+
+.quiz-2-wrap .option-2-title-wrap span {
+    margin: 2% 2%;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    color: var(--blue);
+    letter-spacing: 0.1rem;
+    line-height: 2.6rem;
+    display: inline-block;
+}
+
+/* ------------------- 心理測驗第三題 ------------------- */
+
+.quiz-3-wrap {
+    display: flex;
+    margin: 0 auto;
+    /* min-height: 90vh; */
+    align-items: center;
+}
+
+.quiz-3-wrap .quiz-q {
+    color: #fff;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 3.6rem;
+    letter-spacing: 1.2rem;
+    text-indent: 1.2rem;
+    text-align: center;
+    /* padding-top: 100px; */
+}
+
+.quiz-3-wrap .quiz-row {
+    min-height: 50vh;
+    align-content: center;
+}
+
+.quiz-3-wrap .option-wrap {
+    text-align: center;
+    color: var(--gold);
+    margin: 0 auto;
+    padding: 0 2%;
+    cursor: pointer;
+}
+
+.quiz-3-wrap .option-3-title {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 2.6rem;
+}
+
+.quiz-3-wrap .option-3-title.active {
+    color: #ffd76c;
+}
+
+.quiz-3-wrap .option-img {
+    max-width: 50%;
+    opacity: 0.5;
+}
+
+.quiz-3-wrap .option-img.show {
+    opacity: 1;
+}
+
+.quiz-3-wrap .option-3-txt {
+    margin: 5% 2%;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    line-height: 2.6rem;
+    color: transparent;
+}
+
+.quiz-3-wrap .option-3-txt.show {
+    color: #ffd76c;
+}
+
+/* ------------------- 心理測驗第四題 ------------------- */
+
+.quiz-4-wrap {
+    display: flex;
+    margin: 0 auto;
+    /* min-height: 90vh; */
+    align-items: center;
+}
+
+.quiz-4-wrap .quiz-q {
+    color: #fff;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 3.6rem;
+    letter-spacing: 1.2rem;
+    text-indent: 1.2rem;
+    text-align: center;
+    /* padding-top: 100px; */
+}
+
+.quiz-4-wrap .quiz-row {
+    min-height: 50vh;
+    align-content: center;
+}
+
+.quiz-4-wrap .option-wrap {
+    text-align: center;
+    color: var(--gold);
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.quiz-4-wrap .option-4-title {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 2.6rem;
+    margin: 8%;
+}
+
+.quiz-4-wrap .option-4-title.active {
+    color: #ffd76c;
+}
+
+.quiz-4-wrap .option-4-title span {
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    line-height: 2.6rem;
+    display: block;
+    color: transparent;
+}
+
+.quiz-4-wrap .option-img-wrap {
+    margin: 0 auto;
+    width: 100%;
+    height: 110px;
+}
+
+.quiz-4-wrap .option-img {
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.6;
+}
+
+.quiz-4-wrap .option-img.show {
+    height: 100%;
+    object-fit: contain;
+    opacity: 1;
+}
+
+.quiz-4-wrap .option-4-txt {
+    margin: 8% 2%;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    line-height: 2.6rem;
+    color: transparent;
+}
+
+.quiz-4-wrap .option-4-title span.show {
+    color: #ffd76c
+}
+
+.quiz-4-wrap .option-4-txt.show {
+    color: #ffd76c;
+}
+
+/* ------------------- 心理測驗第五題 ------------------- */
+
+.quiz-5-wrap {
+    display: flex;
+    margin: 0 auto;
+    /* min-height: 90vh; */
+    align-items: center;
+    /* padding-bottom: 70px; */
+}
+
+.quiz-5-wrap .quiz-q {
+    color: #fff;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 3.6rem;
+    letter-spacing: 1.2rem;
+    text-indent: 1.2rem;
+    text-align: center;
+    /* padding-top: 100px; */
+}
+
+.quiz-5-wrap .quiz-row {
+    min-height: 50vh;
+    align-content: center;
+}
+
+.quiz-5-wrap .option-wrap {
+    text-align: center;
+    color: var(--gold);
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.quiz-5-wrap .option-5-title {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 2.6rem;
+    margin: 8%;
+}
+
+.quiz-5-wrap .option-5-title.show {
+    color: #ffd76c;
+}
+
+.quiz-5-wrap .option-img {
+    object-fit: contain;
+    max-width: 50%;
+}
+
+.quiz-5-wrap .option-img.show {
+    border-radius: 50%;
+    border: 3px solid #ffd76c;
+}
+
+.quiz-5-wrap .next-btn {
+    font-size: 3.0rem;
+}
+
+.quiz-empty {
+    padding-top: 100px;
+}
+
+/* ------------------- 心理測驗手機板 ------------------- */
+
+@media (max-width: 991px) {
+
+    .quiz-wrapper{
+        height: 700px;
+    }
+
+    /* ----- 心理測驗(第一題) ----- */
+    .quiz-1-wrap .option-wrap {
+        margin-bottom: 10%;
+    }
+    .quiz-1-wrap .option-1-title-wrap p:nth-child(1) {
+        font-size: 1.8rem;
+    }
+    .quiz-1-wrap .option-1-title-wrap p:nth-child(2) {
+        font-size: 1.6rem;
+    }
+    .quiz-1-wrap .option-img {
+        max-width: 250px;
+        /* max-height: 250px; */
+    }
+    /* ----- 心理測驗(第二題) ----- */
+
+    /* .quiz-2-wrap {
+        margin-top: 30%;
+    } */
+
+    .quiz-2-wrap .option-wrap {
+        width: 350px;
+        height: 200px;
+        margin-bottom: 5%;
+    }
+    .quiz-2-wrap .option-2-title-wrap p {
+        width: 350px;
+        /* height: 200px; */
+        font-size: 1.8rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .quiz-2-wrap .option-2-title-wrap span {
+        margin: 2% 2%;
+        font-size: 1.4rem;
+        text-align: center;
+        letter-spacing: 0.1rem;
+        line-height: 2.0rem;
+        display: inline-block;
+    }
+
+    /* ------------------- 心理測驗(共用) ------------------- */
+    .quiz-1-wrap, .quiz-2-wrap, .quiz-3-wrap, .quiz-4-wrap, .quiz-5-wrap {
+        min-height: 0;
+    }
+    .option-wrap {
+        max-width: 50%;
+    }
+    .quiz-3-wrap .option-wrap {
+        height: 220px;
+    }
+    .quiz-4-wrap .option-4-title {
+        margin: 0;
+        font-size: 2.2rem;
+    }
+    .quiz-4-wrap .option-wrap {
+        height: 220px;
+    }
+    .quiz-4-wrap .option-img-wrap {
+        height: 100px;
+    }
+    /* .quiz-5-wrap {
+        padding-bottom: 40px;
+    } */
+    .quiz-5-wrap .next-btn {
+        /* margin-top: 10%; */
+        font-size: 3.0rem;
+    }
+    .quiz-3-wrap .option-img {
+        max-width: 40%;
+    }
+    .quiz-1-wrap .quiz-row, .quiz-2-wrap .quiz-row, .quiz-3-wrap .quiz-row, .quiz-4-wrap .quiz-row, .quiz-5-wrap .quiz-row {
+        margin-top: 0;
+    }
+    .quiz-1-wrap .quiz-q, .quiz-2-wrap .quiz-q, .quiz-3-wrap .quiz-q, .quiz-4-wrap .quiz-q, .quiz-5-wrap .quiz-q {
+        font-size: 2.0rem;
+        letter-spacing: 0.5rem;
+    }
+    .quiz-quote {
+        font-size: 1.8rem;
+        letter-spacing: 0.4rem;
+        line-height: 2.2rem;
+    }
+
+    .quiz-2-wrap .next-btn-wrap,
+    .quiz-3-wrap .next-btn-wrap,
+    .quiz-4-wrap .next-btn-wrap{
+        margin-bottom: 10%;
+    }
+}
+
+/* ------------------- 手機板彈出視窗 ------------------- */
+
+/* Modal */
+
+.modal, .modal-box {
+    z-index: 900;
+}
+
+.modal-sandbox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .8);
+    overflow: auto;
+    text-align: center;
+}
+
+.modal-box {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    margin: 150px auto;
+    animation-name: modalbox;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(0, 0, .3, 1.6);
+}
+
+.modal-header {
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-header h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 3.0rem;
+    color: var(--blue);
+    text-align: center;
+}
+
+.modal-header h3 {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: var(--blue);
+    text-align: center;
+}
+
+.modal img {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.modal-body {
+    color: var(--blue);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.modal-body p {
+    margin: 2% 2%;
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    color: var(--blue);
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+}
+
+/* Close Button */
+
+.close-modal {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 2%;
+    width: 150px;
+    border-radius: 5px;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    background-color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Noto Serif TC', serif;
+    letter-spacing: .3rem;
+}
+
+.close-modal:hover {
+    background-color: var(--gold);
+    color: #fff;
+}
+
+/* Animation */
+
+@-webkit-keyframes modalbox {
+    0% {
+        /* top: -250px; */
+        transform: perspective(1px) translateY(-250px);
+        opacity: 0;
+    }
+    100% {
+        /* top: 0; */
+        transform: perspective(1px) translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes modalbox {
+    0% {
+        /* top: -250px; */
+        transform: perspective(1px) translateY(-250px);
+        opacity: 0;
+    }
+    100% {
+        /* top: 0; */
+        transform: perspective(1px) translateY(0px);
+        opacity: 1;
+    }
+}
+
+        /* animated animations */
+
+        .animatable {
+  
+            /* initially hide animatable objects */
+            visibility: hidden;
+            
+            /* initially pause animatable objects their animations */
+            -webkit-animation-play-state: paused;   
+            -moz-animation-play-state: paused;     
+            -ms-animation-play-state: paused;
+            -o-animation-play-state: paused;   
+            animation-play-state: paused; 
+          }
+          
+          /* show objects being animated */
+          .animated {
+            visibility: visible;
+            
+            -webkit-animation-fill-mode: both;
+            -moz-animation-fill-mode: both;
+            -ms-animation-fill-mode: both;
+            -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+            
+            -webkit-animation-duration: 1s;
+            -moz-animation-duration: 1s;
+            -ms-animation-duration: 1s;
+            -o-animation-duration: 1s;
+            animation-duration: 1s;
+          
+            -webkit-animation-play-state: running;
+            -moz-animation-play-state: running;
+            -ms-animation-play-state: running;
+            -o-animation-play-state: running;
+            animation-play-state: running;
+          }
+          
+          /* CSS Animations (extracted from http://glifo.uiparade.com/) */
+          @-webkit-keyframes fadeInDown {
+              0% {
+                  opacity: 0;
+                  -webkit-transform: translateY(-20px);
+              }	100% {
+                  opacity: 1;
+                  -webkit-transform: translateY(0);
+              }
+          }
+          
+          @-moz-keyframes fadeInDown {
+              0% {
+                  opacity: 0;
+                  -moz-transform: translateY(-20px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -moz-transform: translateY(0);
+              }
+          }
+          
+          @-o-keyframes fadeInDown {
+              0% {
+                  opacity: 0;
+                  -o-transform: translateY(-20px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -o-transform: translateY(0);
+              }
+          }
+          
+          @keyframes fadeInDown {
+              0% {
+                  opacity: 0;
+                  transform: translateY(-20px);
+              }
+              100% {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          }
+          
+          
+          
+          @-webkit-keyframes fadeIn {
+              0% {
+                  opacity: 0;
+              }
+              20% {
+                  opacity: 0;
+              }
+              100% {
+                  opacity: 1;
+              }
+          }
+          
+          @-moz-keyframes fadeIn {
+              0% {
+                  opacity: 0;
+              }
+              20% {
+                  opacity: 0;
+              }
+              100% {
+                  opacity: 1;
+              }
+          }
+          
+          @-o-keyframes fadeIn {
+              0% {
+                  opacity: 0;
+              }
+              20% {
+                  opacity: 0;
+              }
+              100% {
+                  opacity: 1;
+              }
+          }
+          
+          @keyframes fadeIn {
+              0% {
+                  opacity: 0;
+              }
+              60% {
+                  opacity: 0;
+              }
+              20% {
+                  opacity: 0;
+              }
+              100% {
+                  opacity: 1;
+              }
+          }
+          @-webkit-keyframes bounceInLeft {
+              0% {
+                  opacity: 0;
+                  -webkit-transform: translateX(-2000px);
+              }
+              60% {
+                  -webkit-transform: translateX(20px);
+              }
+          
+              80% {
+                  -webkit-transform: translateX(-5px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -webkit-transform: translateX(0);
+              }
+          }
+          
+          @-moz-keyframes bounceInLeft {
+              0% {
+                  opacity: 0;
+                  -moz-transform: translateX(-2000px);
+              }
+          
+              60% {
+                  -moz-transform: translateX(20px);
+              }
+          
+              80% {
+                  -moz-transform: translateX(-5px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -moz-transform: translateX(0);
+              }
+          }
+          
+          @-o-keyframes bounceInLeft {
+              0% {
+                  opacity: 0;
+                  -o-transform: translateX(-2000px);
+              }
+          
+              60% {
+                  opacity: 1;
+                  -o-transform: translateX(20px);
+              }
+          
+              80% {
+                  -o-transform: translateX(-5px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -o-transform: translateX(0);
+              }
+          }
+          
+          @keyframes bounceInLeft {
+              0% {
+                  opacity: 0;
+                  transform: translateX(-2000px);
+              }
+          
+              60% {
+                  transform: translateX(20px);
+              }
+          
+              80% {
+                  transform: translateX(-5px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  transform: translateX(0);
+              }
+          }
+          @-webkit-keyframes bounceInRight {
+              0% {
+                  opacity: 0;
+                  -webkit-transform: translateX(2000px);
+              }
+          
+              60% {
+                  -webkit-transform: translateX(-20px);
+              }
+          
+              80% {
+                  -webkit-transform: translateX(5px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -webkit-transform: translateX(0);
+              }
+          }
+          
+          @-moz-keyframes bounceInRight {
+              0% {
+                  opacity: 0;
+                  -moz-transform: translateX(2000px);
+              }
+          
+              60% {
+                  -moz-transform: translateX(-20px);
+              }
+          
+              80% {
+                  -moz-transform: translateX(5px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -moz-transform: translateX(0);
+              }
+          }
+          
+          @-o-keyframes bounceInRight {
+              0% {
+                  opacity: 0;
+                  -o-transform: translateX(2000px);
+              }
+          
+              60% {
+                  -o-transform: translateX(-20px);
+              }
+          
+              80% {
+                  -o-transform: translateX(5px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -o-transform: translateX(0);
+              }
+          }
+          
+          @keyframes bounceInRight {
+              0% {
+                  opacity: 0;
+                  transform: translateX(2000px);
+              }
+          
+              60% {
+                  transform: translateX(-20px);
+              }
+          
+              80% {
+                  transform: translateX(5px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  transform: translateX(0);
+              }
+          }
+          @-webkit-keyframes fadeInUp {
+              0% {
+                  opacity: 0;
+                  -webkit-transform: translateY(20px);
+              }	100% {
+                  opacity: 1;
+                  -webkit-transform: translateY(0);
+              }
+          }
+          
+          @-moz-keyframes fadeInUp {
+              0% {
+                  opacity: 0;
+                  -moz-transform: translateY(20px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -moz-transform: translateY(0);
+              }
+          }
+          
+          @-o-keyframes fadeInUp {
+              0% {
+                  opacity: 0;
+                  -o-transform: translateY(20px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -o-transform: translateY(0);
+              }
+          }
+          
+          @keyframes fadeInUp {
+              0% {
+                  opacity: 0;
+                  transform: translateY(20px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          }
+          @-webkit-keyframes bounceIn {
+              0% {
+                  opacity: 0;
+                  -webkit-transform: scale(.3);
+              }
+              50% {
+                  -webkit-transform: scale(1.05);
+              }
+          
+              70% {
+                  -webkit-transform: scale(.9);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -webkit-transform: scale(1);
+              }
+          }
+          
+          @-moz-keyframes bounceIn {
+              0% {
+                  opacity: 0;
+                  -moz-transform: scale(.3);
+              }
+          
+              50% {
+                  -moz-transform: scale(1.05);
+              }
+          
+              70% {
+                  -moz-transform: scale(.9);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -moz-transform: scale(1);
+              }
+          }
+          
+          @-o-keyframes bounceIn {
+              0% {
+                  opacity: 0;
+                  -o-transform: scale(.3);
+              }
+          
+              50% {
+                  -o-transform: scale(1.05);
+              }
+          
+              70% {
+                  -o-transform: scale(.9);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -o-transform: scale(1);
+              }
+          }
+          
+          @keyframes bounceIn {
+              0% {
+                  opacity: 0;
+                  transform: scale(.3);
+              }
+          
+              50% {
+                  transform: scale(1.05);
+              }
+          
+              70% {
+                  transform: scale(.9);
+              }
+          
+              100% {
+                  opacity: 1;
+                  transform: scale(1);
+              }
+          }
+          @-webkit-keyframes moveUp {
+              0% {
+                  opacity: 1;
+                  -webkit-transform: translateY(40px);
+              }	100% {
+                  opacity: 1;
+                  -webkit-transform: translateY(0);
+              }
+          }
+          
+          @-moz-keyframes moveUp {
+              0% {
+                  opacity: 1;
+                  -moz-transform: translateY(40px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -moz-transform: translateY(0);
+              }
+          }
+          
+          @-o-keyframes moveUp {
+              0% {
+                  opacity: 1;
+                  -o-transform: translateY(40px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  -o-transform: translateY(0);
+              }
+          }
+          
+          @keyframes moveUp {
+              0% {
+                  opacity: 1;
+                  transform: translateY(40px);
+              }
+          
+              100% {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          }
+          
+          @-webkit-keyframes fadeBgColor {
+              0%{
+                  background:none;
+              }
+            70%{
+                  background:none;
+              }
+              100%{
+                  background:#464646;
+              }
+          }
+          @-o-keyframes fadeBgColor {
+              0%{
+                  background:none;
+              }
+            70%{
+                  background:none;
+              }
+              100%{
+                  background:#464646;
+              }
+          }
+          @keyframes fadeBgColor {
+              0%{
+                  background:none;
+              }
+            70%{
+                  background:none;
+              }
+              100%{
+                  background:#464646;
+              }
+          }
+          
+          .animated.animationDelay{
+              animation-delay:.4s;
+              -webkit-animation-delay:.4s;
+          }
+          .animated.animationDelayMed{
+              animation-delay:1.2s;
+              -webkit-animation-delay:1.2s;
+          }
+          .animated.animationDelayLong{
+              animation-delay:1.6s;
+              -webkit-animation-delay:1.6s;
+          }
+          .animated.fadeBgColor {
+              -webkit-animation-name: fadeBgColor;
+              -moz-animation-name: fadeBgColor;
+              -o-animation-name: fadeBgColor;
+              animation-name: fadeBgColor;
+          }
+          .animated.bounceIn {
+              -webkit-animation-name: bounceIn;
+              -moz-animation-name: bounceIn;
+              -o-animation-name: bounceIn;
+              animation-name: bounceIn;
+          }
+          .animated.bounceInRight {
+              -webkit-animation-name: bounceInRight;
+              -moz-animation-name: bounceInRight;
+              -o-animation-name: bounceInRight;
+              animation-name: bounceInRight;
+          }
+          .animated.bounceInLeft {
+              -webkit-animation-name: bounceInLeft;
+              -moz-animation-name: bounceInLeft;
+              -o-animation-name: bounceInLeft;
+              animation-name: bounceInLeft;
+          }
+          .animated.fadeIn {
+              -webkit-animation-name: fadeIn;
+              -moz-animation-name: fadeIn;
+              -o-animation-name: fadeIn;
+              animation-name: fadeIn;
+          }
+          .animated.fadeInDown {
+              -webkit-animation-name: fadeInDown;
+              -moz-animation-name: fadeInDown;
+              -o-animation-name: fadeInDown;
+              animation-name: fadeInDown;
+          }
+          .animated.fadeInUp {
+              -webkit-animation-name: fadeInUp;
+              -moz-animation-name: fadeInUp;
+              -o-animation-name: fadeInUp;
+              animation-name: fadeInUp;
+          }
+          .animated.moveUp {
+              -webkit-animation-name: moveUp;
+              -moz-animation-name: moveUp;
+              -o-animation-name: moveUp;
+              animation-name: moveUp;
+          }

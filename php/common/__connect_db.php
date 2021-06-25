@@ -1,0 +1,28 @@
+<?php
+// $db_host = 'localhost'; //本機端或別人的IP位置(看SQL在誰那裏)
+// $db_name = 'beeru'; //資料庫名稱
+// $db_user = 'beeru'; //
+// $db_pass = 'beeru';
+
+// 在家改成這一套
+$db_host = 'localhost'; //本機端或別人的IP位置(看SQL在誰那裏)
+$db_name = 'beeru'; //資料庫名稱
+$db_user = 'root'; //自己在家裡連時要改成這樣
+$db_pass = '';//自己在家裡連時要改成這樣
+
+// data source name
+$dsn = sprintf('mysql:host=%s;dbname=%s;charset=utf8', $db_host, $db_name);
+
+$pdo_options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
+];
+
+try {
+    $pdo = new PDO($dsn, $db_user, $db_pass, $pdo_options);
+} catch(PDOException $ex){
+    echo 'Ex:'. $ex->getMessage();
+}
+
+?>

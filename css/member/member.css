@@ -1,0 +1,1845 @@
+body {
+    background-color: #fff;
+}
+.member {
+    background-color: #fff;
+    color: var(--blue);
+}
+
+/* 背景圖 */
+.member .member-wrap {
+    width: 100%;
+    height: 100%;
+    background: url(../../images/common/bg/marble-bg-l.png);
+    background-size: 100% auto;
+    padding: 30px 0;
+    min-height: calc(100vh - 85px);
+}
+
+
+/* ---------------------------------------大標---------------------------------- */
+
+/* 圈圈圖案 */
+.member .member-title {
+    background: url(../../images/common/h1_4_b.svg) no-repeat center center;
+    background-size: contain;
+    transform: translateY(-150%);
+    opacity: 0;
+
+}
+
+/* pipi */
+.member .member-title img {
+    position: absolute;
+    width: 70px;
+    top: -60%;
+    left: 38%;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .member-title img {
+    position: absolute;
+    width: 50px;
+    top: -72%;
+    left:23%;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+}
+
+/* 標題文字 */
+.member .member-title p {
+    color: var(--blue);
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 3.6rem;
+    letter-spacing: 1.2rem;
+    text-indent:1.2rem;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 左邊雕飾 */
+.member .member-title p::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-115%, -50%);
+    width: 150px;
+    height: 50%;
+    background: url(../../images/common/h1_ear_left_b.svg) no-repeat center center;
+    background-size: contain;
+
+}
+
+
+/* 右邊雕飾 */
+.member .member-title p::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right:0;
+    transform: translate(115%, -50%);
+    width: 150px;
+    height: 50%;
+    background: url(../../images/common/h1_ear_right_b.svg) no-repeat center center;
+    background-size: contain;
+
+}
+
+/* 手機版 改字和雕飾大小*/
+@media (max-width: 991px) {
+.member .member-title p {
+    font-size: 2.4rem;
+    letter-spacing: 0.8rem;
+    text-indent:0.8rem;
+}
+
+.member .member-title p::before {
+    width: 60px;
+    height: 32%;
+}
+
+.member .member-title p::after {
+    width: 60px;
+    height: 32%;
+}
+
+}
+
+
+
+/* -----------------------------會員概況------------------------------- */
+.member .member-overveiw {
+    font-family: 'Noto Serif TC', serif;
+    margin-top: 10px;
+    opacity: 0;
+}
+
+/* 頭像 */
+.member .user-pic.small {
+    width: 70%;
+}
+
+.member .user-pic {
+    position: relative;
+}
+
+.member .btn_edit-pic {
+    background-color: var(--gold);
+    color: #fff;
+    position: absolute;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 6%;
+    top: 75%;
+    transition: .5s;
+    transform: translateY(0);
+}
+
+.member .btn_edit-pic:hover {
+    transform: translateY(-3px);
+}
+
+/* 名字 */
+.member .helloname {
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--blue);
+}
+
+/* 我的成就 */
+.member .memberinfo p {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 1.8rem;
+    position: relative;
+    margin-top: 15px;
+}
+.member .myachieve-title {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 1.8rem;
+    position: relative;
+    margin-top: 10px;
+}
+
+.member .myachieve-title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../../images/common/ear_left_g.svg) 0 0 no-repeat;
+    width: 18px;
+    height: 18px;
+    left: -25%;
+    bottom: 23%;
+}
+
+.member .myachieve-title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../../images/common/ear_right_g.svg) 0 0 no-repeat;
+    width: 18px;
+    height: 18px;
+    right: -33%;
+    bottom: 23%;
+}
+
+/* 酒仙指數 */
+.member .beerpercent {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* 折價券按鈕 */
+.member .checkmydiscount {
+    font-family: 'Noto Sans TC', serif;
+    background-color: var(--blue);
+    color: #fff;
+    border-radius: 5px;
+    transition: .5s;
+    letter-spacing: 0.1rem;
+    border: 1.5px solid var(--gold);
+}
+
+.member .checkmydiscount:hover {
+    background-color: var(--gold);
+}
+
+
+
+/* -----------------------------------功能區域------------------------------------ */
+
+/* ---------選單-------- */
+.member .member-func{
+    overflow-x: hidden;
+    opacity: 0;
+}
+
+/* 桌機版 */ 
+@media (min-width: 992px) { 
+    .member .member-menu {
+        position: relative;
+        border-bottom: 0.5px solid #d5d5d5;
+        padding: 0;
+    }
+    
+    .member .member-item-grop {
+        font-size: 1.8rem;
+        font-family: 'Noto Serif TC', serif;
+        font-weight: 600;
+        padding-bottom: 5px;
+    }
+
+    .member .menu-item {
+        cursor: pointer;
+        position: relative;
+    }
+
+    .member .menu-item i {
+        display: none;
+    }
+    
+    .member .menu-active-line {
+        width: 76px;
+        height: 5px;
+        background-color: transparent;
+        position: absolute;
+        bottom: 0;
+        left:0;
+        transition: .2s;
+        transition-timing-function:cubic-bezier(.17,.49,.48,.88);
+    }
+    .member .menu-active-line.on {
+        background-color: var(--gold);
+    }
+    
+    .member .menu-active-line2 {
+        width: 76px;
+        height: 5px;
+        background-color: var(--gold);
+        position: absolute;
+        bottom: 0;
+        left:0;
+        transition: .2s;
+    }
+    .member .menu-active-line2.out {
+        background-color: transparent;
+    }
+
+    .member .haveachieve {
+        width: 40px;
+        position: absolute;
+        top: -10px;
+        right: -45px;
+        animation-name: shakeshake;
+        animation-duration: .8s;
+        animation-iteration-count: infinite;
+        display: none;
+    }
+
+} 
+
+
+/* 手機版 */ 
+@media (max-width: 991px) { 
+    .member .member-menu {
+        margin-top: 10px;
+        padding: 0 15%;
+
+    }
+    
+    .member .member-item-grop {
+        font-size: 1.8rem;
+        font-family: 'Noto Serif TC', serif;
+        font-weight: 600;
+        color: var(--gold);
+    }
+
+    .member .menu-item,  .member .menu-item2{
+        padding: 7px;
+        border-top: 1px dashed var(--blue);
+        position: relative;
+    }
+
+    .member .menu-item i:nth-of-type(1), .member .menu-item2 i:nth-of-type(1){
+        width: 22px;
+        margin-right: 10px;   
+    }
+    .member .menu-item i:nth-of-type(2), .member .menu-item2 i:nth-of-type(2){
+        margin-left: 20px;   
+    }
+
+    .member .haveachieve {
+        width: 40px;
+        position: absolute;
+        top: 0;
+        right: 30%;
+        animation-name: shakeshake;
+        animation-duration: .8s;
+        animation-iteration-count: infinite;
+        display: none;
+    }
+
+}
+
+@keyframes shakeshake {
+    0% {
+        transform: rotate(0deg);   
+    }
+    25% {
+        transform: rotate(10deg);   
+    }
+    50% {
+        transform: rotate(0deg);   
+    }
+    75% {
+        transform: rotate(10deg);   
+    }
+    100% {
+        transform: rotate(0deg);   
+    }
+}
+
+
+
+
+/* ---------------------------------------------功能內容--------------------------------------- */
+
+
+.member .member-func-show {
+    margin-top: 10px;
+    padding-top: 30px;
+}
+/* 手機版 */
+@media (max-width: 991px) {
+    .member .member-func-show {
+    padding: 0 15px;
+    margin-top: 0;
+}
+
+/* 回上一頁 */
+    .member .backtomenu {
+        position: absolute;
+        font-size: 1.8rem;
+        top: 115px;
+        left: 10px;
+        color: transparent;
+        transition: .2s;
+    }
+    .member .backtomenu.on {
+        color: var(--blue);
+    }
+
+}
+
+
+/* 手機板所有功能的標題 */
+.member .mobile-title {
+    font-size:2rem;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.member .mobile-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 20px;
+    background: url(../../images/common/line-g.svg) no-repeat center center;
+    margin-bottom: 10px;
+}
+
+
+/* ---------------------------------所有的功能每個區域------------------------------- */ 
+.member .member-func-box {
+    display: none;
+}
+
+
+
+
+/* ----------------------------------編輯頭像------------------------------------- */
+
+
+/* 左邊大頭 */
+.member .myselectpic {
+    background: url(../../images/common/pipi-mirrow.svg) 68% 90% no-repeat;
+    background-size: 85%;
+    padding: 22%;
+    opacity: 0;
+}
+
+.member .pipimagic {
+    position: absolute;
+    background: url(../../images/common/pipi-magic.svg) center center no-repeat;
+    z-index: 10;
+    width: 50%;
+    height: 40%;
+    top: -8%;
+    left: -1%;
+    opacity: 0;
+}
+
+.member .myselectpic img {
+   transform:translate(2%,12%);
+   opacity: 0;
+}
+
+
+/* 右邊選擇 */
+
+/* 標題 */
+.member .selectitem p {
+    text-align: center;
+    border-bottom: 1.2px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+/* 選項 */
+.member .picitems-wrap {
+    border: 2px solid var(--gold);
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.member .pic-item {
+    height: 100px;
+    margin: 15px 0;
+    opacity: .4;
+    transition: .3s;
+    cursor: pointer;
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .pic-item {
+    height: 80px;
+    margin: 8px 0;
+    opacity: .4;
+    transition: .3s;
+    cursor: pointer;
+}
+}
+
+
+
+.member .pic-item:hover {
+    opacity: 1;
+}
+
+.member .pic-item.select {
+    opacity: 1;
+}
+
+.member .pic-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 按鈕 */
+.member .userpic-button-wrap button {
+    background-color: var(--blue);
+    border: 1px solid var(--gold);
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 5px;
+    width: 50%;
+    transition: .5s;
+}
+
+.member .userpic-button-wrap button:hover {
+    background-color: var(--gold);
+}
+
+/* ----------------------------------會員資料------------------------------------- */
+.member .mydata-edit,  .member .password-reset {
+    display: none;
+}
+
+
+
+
+/* 會員資料 */
+.member .mydata-txt {
+    border-bottom: 1px solid #d5d5d5;
+    position: relative;
+}
+
+.member .mydata-txt p:nth-of-type(1) {
+    color: var(--gold);
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.member .data-button-wrap button {
+    background-color: var(--blue);
+    border: 1px solid var(--gold);
+    color: #fff;
+    border-radius: 5px;
+    /* padding: 0 10px; */
+    margin: 0 5px;
+    width: 50%;
+    transition: .5s;
+}
+
+.member .btn_edit-cancel, .btn_password-cancel {
+    background-color: var(--blue);
+    border: 1px solid var(--gold);
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 5px;
+    width: 50%;
+    cursor: pointer;
+    text-align: center;
+    transition: .5s;
+}
+
+.member .data-button-wrap button:hover , .btn_edit-cancel:hover, .btn_password-cancel:hover{
+    background-color: var(--gold);
+}
+
+
+/* 編輯會員  &   重設密碼 */
+.member .mydata-editall>p:nth-of-type(1) {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 32%;
+    margin: 0 auto 20px;
+}
+
+.member .mydata-editall>p:nth-of-type(1)::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1.2px;
+    background-color: var(--blue);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateX(-105%);
+}
+.member .mydata-editall>p:nth-of-type(1)::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1.2px;
+    background-color: var(--blue);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(105%);
+}
+
+.member .mydata-editall .input-btn {
+    width: 100%;
+    height: 35px;
+    padding-left:35px;
+    color: var(--gold);
+    border: solid 1px var(--gold);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.member .mydata-editall .input-btn2 {
+    width: 100%;
+    padding-left:5px;
+    color: var(--gold);
+    border: solid 1px var(--gold);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+.member .mydata-editall .user-icon02 {
+    position: absolute;
+    color: var(--gold);
+    top: 45px;
+    left:10px;
+}
+
+.member .mydata-editall .mydata-birthday input::-webkit-calendar-picker-indicator{
+    position: absolute;
+    left: -15px;
+    display: block; 
+    background: url('../../images/common/birthday-icon.svg') no-repeat; 
+    width: 15px; 
+    height: 15px; 
+}
+
+.member .mydata-editall .lock-icon02 {
+    position: absolute;
+    color: var(--gold);
+    top: 45px;
+    left: 4%;
+}
+
+
+/* 錯誤資訊 */
+.member .warn {
+    color: var(--pink);
+}
+
+
+.member .auto-btn{
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: transparent ;
+    border: transparent;
+    cursor: pointer;
+    left: 0;
+    top: 30px;
+}
+
+.member .auto-btn:hover{
+    background-color:#F5F5F5;
+    transition: .4s;
+
+}
+
+@media (max-width: 991px) {
+    .member .auto-btn{
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        background-color:transparent ;
+        border: transparent;
+        cursor: pointer;
+        left: 0;
+        top: -15px;
+    }
+
+}
+
+/* ----------------------------------我的酒櫃------------------------------ */
+
+
+/* 手風琴 */
+.member .memberAccordion {
+    background-color: var(--blue);
+    font-family: 'Noto Serif TC', serif;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+}
+
+.member .memberAccordion-content {
+    transition: .5s;
+    height: fit-content;
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .memberAccordion-content {
+    margin: 15px 0;
+}
+}
+
+
+
+.member .memberAccordion-content.no {
+    margin: 5px 0;
+}
+
+
+/* --------關注-------- */
+
+
+
+.member .myattention-items input[type=checkbox] {
+    display: none;
+}
+
+.member .myattention-items input[type=checkbox]+span {
+    color: var(--gold);
+    cursor: pointer;
+    transition: .5s;
+    user-select: none;
+    position: relative;
+    margin-right: 10px;
+    padding-left:20px ;
+}
+.member .myattention-items input[type=checkbox]+span::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+}
+.member .myattention-items input[type=checkbox]:checked+span::after{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+    background-color: var(--gold);
+    border-radius: 50%;
+}
+
+.member .btn_cancelAtten {
+    background-color: var(--gold);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    transition: .5s;
+    transform: translateY(0);
+}
+
+.member .btn_cancelAtten:hover {
+    transform: translateY(-3px);
+}
+
+
+/* --------收藏----------- */
+
+
+
+
+/* --------排序和搜尋-------- */
+
+
+/* 商品排序 */
+.member .sort-option {
+    color: var(--gold);
+    font-size: 1.6rem;
+    letter-spacing: 0.15rem;
+    background-color: #fff;
+    border: 1px solid var(--gold);
+    cursor: pointer;
+    height: 41px;
+    outline: none;
+    padding: 5px;
+}
+
+/* 商品搜尋 */
+
+.member .p_search {
+    border: 1px solid var(--gold);
+    height: 41px;
+    border-radius: 30px;
+    width: 200px;
+    padding: 0 8px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    
+} 
+
+.member .p_search i {
+    color: var(--gold);
+    line-height: 41px;
+}
+
+.member .p_search .search2 {
+    width: 120px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.member .p_search .search2::-webkit-input-placeholder {
+    color: var(--gold);
+    letter-spacing: 0.1rem;
+}
+
+
+
+
+/* --------商品陳列--------- */
+.member .product-arrang {
+    color: #fff;
+    /* padding: 30px 0; */
+}
+
+
+/* 單支商品 */
+.member .beer-product {
+    margin-bottom: 50px;
+
+}
+/* 商品圖片 */
+.member .pro-pic {
+    width: 75%;
+    min-width: 200px;
+    max-width: 250px;
+    background-color: #fff;
+    margin: 0 auto;
+    height: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.member .pro-pic:hover .beer-pic {
+    opacity: .7;
+}
+
+.member .pro-pic .beer-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: .6s;
+}
+
+/* 標籤 */
+
+.member .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* new標籤 */
+.member .new-label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    width: 40px;
+    background-color: var(--blue);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+ /* hot標籤 */
+.member .hot-label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    width: 40px;
+    background-color: var(--red);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* 國家圖片 */
+.member .pro-pic .country {
+    width: 25px;
+    position:absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* 收藏按鈕 */
+.member .pro-pic .collect {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.member .btn_collect, .btn_collect_active {
+    background-color: transparent;
+    border: none;
+    color: var(--red);
+    padding: 0;
+    font-size: 24px;  
+    cursor: pointer; 
+    transition: .3s;
+}
+
+.member .btn_collect:hover, .btn_collect_active:hover {
+    transform: scale(1.1,1.1);
+}
+
+.member .btn_collect::after {
+    content: '加入收藏';
+    display: block;
+    position:absolute;
+    top: -10px;
+    left: -70%;
+    font-size: 1.2rem;
+    width: 250%;
+    color: transparent;
+    transition: .3s;
+}
+
+.member .btn_collect:hover::after {
+    color: var(--red);
+}
+
+
+/* 商品介紹 */
+.member .pro-intro {
+    width: 100%;
+    max-width: 320px;
+    background-color: var(--gold);
+    border-radius: 10px;
+    margin: -20px auto 0;
+    padding: 40px 20px 15px;
+    height: 210px;
+
+}
+
+
+
+/* 手機版 改高度*/
+@media (max-width: 991px) {
+.member .pro-intro {
+    height: 180px;
+}
+}
+
+/* 品名 */
+.member .p-name {
+    transition: .6s;
+}
+
+.member .p-name:hover .p-name-c{
+    color: var(--yellow);
+}
+
+.member .p-name-c {
+    line-height: 2rem;
+    transition: .6s;
+    
+}
+.member .p-name-e {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: rgb(223, 223, 223);
+}
+
+/* 購買數量 */
+.member .quantity {
+    border: 1px solid #fff;
+    padding: 0 15% ;
+}
+
+.member .buy-number {
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+  
+.member .minus, .member .plus {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.member .minus:hover, .member .plus:hover {
+    color: var(--yellow);
+}
+
+
+/* 商品價格 */
+.member .p-price {
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 1.8rem; 
+    font-weight: 600;   
+}
+.member .p-price span {
+    font-size: 1.4rem;
+}
+
+/* 加入購物車按鈕 */
+.member .add-cart {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1.6rem; 
+    cursor: pointer;
+    transition: .3s;
+    padding: 0 3px;
+    
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .add-cart {
+    background-color: #fff;
+    color: var(--gold);
+}
+
+}
+.member .add-cart i {
+    margin-right: 8px;
+}
+
+
+.member .add-cart:hover {
+    background-color: #fff;
+    color: var(--gold);
+}
+
+
+
+
+/* --------------------------我的評價------------------------------- */
+
+/* 評價的box */
+.member .comment-box {
+    border: 2px solid var(--blue);
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+
+/* 標題 */
+.member .comment-box .title {
+    border-bottom: 0.5px solid #BABABA;
+}
+
+
+
+/* 內容 */
+.member .this-p, .member .thisscore, .member .thiscommtent {
+    min-height: 80px;
+}
+
+
+/* 手機版 改高度*/
+@media (max-width: 991px) {
+.member .this-p, .member .thisscore, .member .thiscommtent {
+    height: fit-content;
+    margin-bottom: 15px;
+}
+
+}
+
+
+
+/* 商品圖 */
+.member .com-pro .thisp-pic {
+    width: 30px;
+    height: 80px;
+    margin-top: 10px;
+    transition: .5s;
+}
+
+.member .com-pro .thisp-pic:hover {
+    opacity: .7;
+}
+
+.member .com-pro .thisp-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 0 0;
+}
+
+/* 商品名稱 */
+.member .com-pro .thisp-name {
+    color: var(--gold);
+    font-family: 'Noto Serif TC', serif;
+    line-height: 1.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.member .com-pro .c-name {
+    transition: .5s;
+}
+.member .com-pro .c-name:hover {
+    color: rgb(160, 109, 15);
+    text-decoration: underline;
+}
+
+
+.member .com-pro .e-name {
+    font-size: 1.3rem;
+    opacity: .8;
+}
+
+/* 分數 */
+.member .com-score .myscore {
+    width: 80%;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* 評論 */
+.member .commenttextarea {
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    color: var(--gold);
+    padding: 0 10px;
+    font-size: 1.5rem;
+    outline: none;
+    line-height: 2.2rem;
+    height: 70px;
+}
+
+.member .mycommenttxt {
+    line-height: 2.2rem;
+}
+
+/* 送出按鈕 */
+.member .member-button{
+    height: 112px;
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .member-button{
+    height: fit-content;
+}
+}
+
+.member .member-button button{
+    background-color: var(--gold);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 5px;
+    transition: .3s;
+    transform: translateY(0);
+}
+
+.member .member-button button:hover {
+    transform: translateY(-3px);
+}
+
+.member .member-button .btn_comment-edit {
+    background-color: var(--gold);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0 7px;
+}
+
+/* 啤酒分數 */
+
+.member .beer-score {
+    height: 40px;
+    margin-top: 10px;
+}
+
+.member .beer-score img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    object-position: 0 0;
+}
+
+/* ------------------------我的預約---------------------------- */
+.member .event-box {
+    border: 2px solid var(--blue);
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+/* 標題 */
+.member .event-box .title {
+    border-bottom: 0.5px solid #BABABA;
+}
+/* 手機版 */
+@media (max-width: 991px) {
+.member .event-box .title {
+    border-bottom: none;
+}
+}
+
+
+
+/* 照片 */
+.member .event-pic {
+    height: 112px;
+    transition: .5s;
+}
+
+.member .event-pic:hover {
+    opacity: .7;
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .event-pic {
+    height: fit-content;
+    margin-bottom: 20px;
+} 
+}
+
+.member .event-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 字 */
+.member .event-box p {
+    line-height: 2.2rem;
+}
+
+.member .thislocation p:nth-of-type(2) {
+    font-size: 1.3rem;
+    color: #163d50a6;
+}
+
+/* 額滿字 */
+.member .fullsign {
+    color: #fff;
+    background-color: var(--red);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 5px;
+    padding: 5px;
+    transition: .3s;
+    transform: translateY(0);
+}
+
+.member .fullsign:hover {
+    transform: translateY(-3px);
+}
+
+
+
+
+/* ----------------------------我的贊助---------------------------- */
+.member .fund-box {
+    border: 2px solid var(--blue);
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+/* 標題 */
+.member .fund-box .title {
+    border-bottom: 0.5px solid #BABABA;
+}
+/* 手機版 */
+@media (max-width: 991px) {
+.member .fund-box .title {
+    border-bottom: none;
+}
+}
+
+
+/* 照片 */
+.member .fund-pic {
+    height: 100px;
+    transition: .5s;
+}
+
+.member .fund-pic:hover {
+    opacity: .7;
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .fund-pic {
+    height: fit-content;
+    margin-bottom: 20px;
+} 
+}
+
+/* 字 */
+.member .fund-box p {
+    line-height: 2.2rem;
+}
+
+.member .thisname p {
+    color: var(--gold);
+    transition: .5s;
+}
+
+.member .thisname p:hover {
+    color: rgb(160, 109, 15);
+    text-decoration: underline;
+}
+
+.member .thisconfirm span {
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+
+.member .fund-total {
+    color: var(--red);
+}
+
+.member .fund-button {
+    height: 100px;
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .fund-button{
+    height: fit-content;
+}
+}
+
+/* ------------------------------我的成就-------------------------- */
+
+/* 大框 */
+.member .myachieve-box {
+    border: 2px solid var(--gold);
+    border-radius: 25px;
+    text-align: center;
+    padding: 30px 10px;
+    background-color: rgba(255, 255, 255, 0.548);
+}
+
+/* 標題 */
+.member .a-title {
+    font-size: 2rem;
+    color: var(--gold);
+    font-weight: 600;
+    font-family: 'Noto Serif TC', serif;
+    background-color: #fff;
+    width: fit-content;
+    margin: -52px auto 0;
+    padding: 0 50px;
+    position: relative;
+    letter-spacing: 0.15rem;
+}
+
+.member .a-title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../../images/common/ear_left_g.svg) 0 0 no-repeat;
+    width: 10px;
+    height: 18px;
+    left: 15px;
+    bottom: 10px;
+}
+
+.member .a-title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../../images/common/ear_right_g.svg) 0 0 no-repeat;
+    width: 10px;
+    height: 18px;
+    right: 15px;
+    bottom: 10px;
+}
+
+/* 圓餅進度的box */
+.member .achieveitem-box {
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+/* 圓形灰底 */
+.member .achieveitem-box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #c9c9cc;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+/* 可領取狀態 */
+.member .achieveitem-box.get::after {
+    background-color: #fff;
+}
+
+.member .achieveitem-box.get::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background-color: var(--gold);
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+/* 圓餅進度條 */
+.member .mycircle {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: var(--gold);
+    border-radius: 100%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)  rotate(45deg);
+    clip-path: polygon(50% 50%, 0% 0%)
+}
+
+.member .mycircle.c-30 {
+     clip-path: polygon(50% 50%, 0% 0%, 100% 0%, 100% 60%)
+}
+.member .mycircle.c-60 {
+     clip-path: polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, 40% 100%)
+}
+.member .mycircle.c-90 {
+    clip-path: polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, 0 100% , 0 40%)
+}
+
+
+/* 圓形內的字 */
+.member .achieveitem-box p {
+    color: #fff;
+    line-height: 2rem;
+}
+
+.member .achieveitem-box.get p {
+    color: var(--gold);
+}
+
+
+/* 獎勵/再接再厲按鈕 */
+.member .not-getachieve {
+    border: none;
+    background-color: #c9c9c9;
+    border-radius: 5px;
+    color: #fff;
+    width: fit-content;
+    padding: 0 10px;
+}
+.member .getachieve {
+    border: none;
+    background-color: var(--red);
+    border-radius: 5px;
+    color: #fff;
+    width: fit-content;
+    padding: 0 10px;
+}
+
+/* 國家徽章 */
+
+.member .country-item {
+    background: #666666;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: #fff;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    opacity: .2;
+    margin: 0 5px 10px;
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .country-item {
+    width: 55px;
+    height: 55px;
+    margin: 0  0 10px;
+}
+}
+
+.member .country-item.get {
+    background: var(--gold);
+    opacity: 1;
+}
+
+.member .country-item img {
+    width: 55%;
+    margin: 0 auto 5px;
+}
+
+
+
+/* 類型徽章 */
+.member .type-item {
+    background: #666666;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: #fff;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    opacity: .2;
+    margin: 0 10px 10px;
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .type-item {
+    margin: 0 5px 10px;
+}
+}
+
+.member .type-item.get {
+    background: var(--blue);
+    opacity: 1;
+}
+
+.member .type-item img {
+    width: 15%;
+    margin: 0 auto 5px;
+}
+
+/* 酒廠徽章 */
+.member .brand-item {
+    background: #c4c4c4;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: .5;
+    margin-bottom: 10px;
+}
+
+/* 手機版 */
+@media (max-width: 991px) {
+.member .brand-item {
+    width: 50px;
+    height: 50px;
+}
+}
+
+.member .brand-item.get {
+    background: #ffd86c86;
+    opacity: 1;
+}
+
+.member .brand-item img {
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    margin: 0 auto 5px;
+
+}
+
+/* 集章完成說明 */
+.member .geta-text {
+    font-size: 1.4rem;
+    color: #c9c9c9;
+    position: relative;
+    padding-left: 30px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.member .geta-text.ispink {
+    color: var(--pink);
+}
+
+.member .geta-text::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 100%;
+    background: url(../../images/common/pink-pipi.svg) center center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(1);
+    opacity: .5;
+}
+
+.member .geta-text.ispink::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 100%;
+    background: url(../../images/common/pink-pipi.svg) center center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: none;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------我的訂單-------------------------- */
+
+
+/* 訂單編號 */
+.member .order-detail>p {
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+
+
+/* 訂單BOX */
+.member .order-d-box {
+    border: 2px solid var(--blue);
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+/* 手機版 */ 
+@media (max-width: 991px) { 
+.member .order-d-box {
+    border-radius: 0;
+}
+}
+
+/* 商品部分 */
+.member .p-thead, .member .my-checkout-p {
+    border-bottom: 0.5px solid #BABABA;
+    padding: 10px 0 ;
+}
+
+.member .my-checkout-p .thisp-pic {
+    width: 30px;
+    height: 80px;
+    transition: .5s;
+}
+
+.member .my-checkout-p .thisp-pic:hover {
+    opacity: .7;
+}
+
+.member .my-checkout-p .thisp-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.member .my-checkout-p .thisp-name {
+    color: var(--gold);
+    font-family: 'Noto Serif TC', serif;
+    line-height: 1.8rem;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.member .my-checkout-p .c-name {
+    transition: .5s;
+}
+.member .my-checkout-p .c-name:hover {
+    color: rgb(160, 109, 15);
+    text-decoration: underline;
+}
+
+.member .my-checkout-p .e-name {
+    font-size: 1.3rem;
+    opacity: .8;
+}
+
+.member .calc-price .coupon, .member .calc-price .shipping {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.member .calc-price .total-price {
+    color: var(--red);
+}
+
+/* 訂單概況 */
+.member .v-thead {
+    border-bottom: 0.5px solid #BABABA;
+    font-weight: 500;
+}
+
+.member .v-tbody {
+    border-bottom: 0.5px solid #BABABA;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+
+/* 訂單明細&收件人標題 */
+.member .product-detail {
+    transition: .5s;
+    overflow: hidden;
+    height: fit-content;
+}
+
+
+.member .detail-header {
+    background-color: #E7E7E7;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.member .detail-header:hover {
+    color: #163d509c;
+}
+
+.member .d-header>p {
+    background-color: #E7E7E7;
+    font-weight: 500;
+}
+
+
+/* 收件人 */
+.member .re-content {
+    background-color: #F5F5F5;
+    padding: 10px 0;
+}
+
+.member .re-thead {
+    border-bottom: 0.5px solid #BABABA;
+    color: var(--gold);
+}
+
+.member .re-tbody {
+    padding: 10px 0;
+}
+
+
+/* 手機版 */ 
+@media (max-width: 991px) { 
+    .member .re-thead {
+        border-bottom:none;
+        color: var(--gold);
+    }
+    
+    .member .re-tbody {
+        padding: 0;
+        
+    }
+
+
+}
+
+/* 訂單空白狀態 */
+.member .empty-status>p  {
+    color: #b69564d0;
+    margin-bottom: 10px;
+}
+
+.member .starttogo {
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    color:  var(--gold);
+    transition: .3s;
+}
+
+.member .starttogo:hover {
+    background-color: var(--gold);
+    color: #fff;
+}
+
+
+
+/* -------------return to top -------------*/
+
+#return-to-top {
+    position: fixed;
+    z-index: 999;
+    bottom: 100px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+#return-to-top img {
+    color: #F2D5C4;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    transition:.3s;
+    /* opacity:.4; */
+}
+
+#return-to-top:hover img {
+    color: #fff;
+    top: 5px;
+    /* transform: scale(1.1); */
+    /* opacity:1; */
+}
+
+/* 手機版 */
+
+@media (max-width: 991px) {
+    #return-to-top {
+        width: 70px;
+        height: 70px;
+        bottom: 100px;
+        right: 20px;
+    }
+}
+
+
+
+
